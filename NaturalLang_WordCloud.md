@@ -1,27 +1,27 @@
-Using the [Link](https://www.nltk.org/) on our dataset of over 1 Millon apps from Google Play and Apple App Store I created a **world cloud** to display the **top 20** words used in the naming conventions of eduacational apps. Here is a snippit of the code:
+**Focus:** Python and Machine Learning with Natural Language Processing Toolkit.
 
+**Description:** the [Link](https://www.nltk.org/) on our dataset of over 1 Millon apps from Google Play and Apple App Store I created a **world cloud** to display the **top 20** words used in the naming conventions of eduacational apps. Here is a snippit of the code:
+
+```
 # Libraries for Word Cloud
 
-````
 from os import path
 from PIL import Image
-from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator```
-
-````
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 
 text = " ".join(word for word in edu_apps_df.app_name)
-print('There are {} words in the app_names column'.format(len(text)))```
+print('There are {} words in the app_names column'.format(len(text)))
 
-````
 edu_stopwords = set(STOPWORDS)
-wordcloud = WordCloud(stopwords=edu_stopwords, max_words=20, background_color='lightblue').generate(text)```
+wordcloud = WordCloud(stopwords=edu_stopwords, max_words=20, background_color='lightblue').generate(text)
 
 # display
-````
 
 plt.figure( figsize=(20,10) )
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
-plt.show()```
+plt.show()
 
-![Image](images/AppNames_WordC.png)
+```
+
+....![Image](images/AppNames_WordC.png)
