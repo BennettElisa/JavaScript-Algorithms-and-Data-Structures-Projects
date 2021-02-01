@@ -1,6 +1,6 @@
 **Focus:** Python and Machine Learning with Natural Language Processing Toolkit.
 
-**Description:** the [Link](https://www.nltk.org/) on our dataset of over 1 Millon apps from Google Play and Apple App Store I created a **world cloud** to display the **top 20** words used in the naming conventions of eduacational apps. Here is a snippit of the code:
+**Description:** Created a **world cloud** to display the **top 20** words used in the naming conventions of eduacational apps of over 1 Millon apps from Google Play and Apple App Store. The datasets where found individually on Kaggle and then merged together. Here is a snippit of the code:
 
 ```
 # Libraries for Word Cloud
