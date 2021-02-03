@@ -1,8 +1,8 @@
 ## Section 15: Merge Sort
 
-Big O Time: O(n log n)
+Time Complexity: O(n log n) - best and worst time complexity are the same for merge sort
 
-Big O Space: O(n)
+Space Complexity: O(n)
 
 - Merge sort will always be O(n log n) at it's best and at it's worst
 - Considered a more intermediate algorithm
@@ -16,3 +16,5 @@ Big O Space: O(n)
 - then builds up a newly sorted array
 
 ![mergeSortExample](visuals/mergeSortExample.png)
+
+Reference: JavaScript Algortithms and Data Structures Colt Steele
