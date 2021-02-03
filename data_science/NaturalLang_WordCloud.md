@@ -24,4 +24,4 @@ plt.show()
 
 ```
 
-....![Image](images/AppNames_WordC.png)
+....![Image](data_science/images/AppName_WorldC.png)
