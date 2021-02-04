@@ -32,3 +32,21 @@ n - The size of the input Complexities ordered in the smallest to largest.
 - Cubic Time: O(n3)
 - Exponential Time: O(bn)
 - Facortial Time: O(n!)
+
+Intermediate Algorithms
+
+- Merge Sort - O(n log n)
+
+  - helper function that sorts numbers
+  - recursion function that breaks one array down into smaller and smaller arrays that are passed to the helper function
+
+- Quick Sort: Best O(n log n) Worst O(log n^2)
+
+  - all about the pivot point
+  - take an array, decided on a pivot point
+  - ideally pivot point would be the mean
+  - however the first elementhe is choosen in the example with Colt Steele
+  - take the pivot point and see if it's great than the next element if so, increment the index varaiable if not move to the next element
+  - more to come....
+
+- Radix Sort
