@@ -1,12 +1,12 @@
 # Singly Linked List
 
-Objectives: - define a singly linked list - compare and contrast linked list with arrays - implement insertion, removal and traversal methods on singly linked list
+**Objectives:** - Define a singly linked list - Compare and contrast linked list with arrays - Implement insertion, removal and traversal methods
 
-It is a data structure that stores what ever you want and it's ordered. Linked list consist of nodes and each node has a value and a pointer to another node or null **BUT NO INDEXES** like an array. **Random access is NOT allowed** meaning you have traverse each item to get to the end .
+A **singly linked list** is a data structure to store what ever you want and it's ordered. Linked list consist of nodes and each node has a value and a pointer to another node or null **BUT NO INDEXES** like an array. **Random access is NOT allowed** meaning you have traverse each item to get to the end .
 
 A node contains information like a string or a number AND it references ANOTHER node.
 
-Properties:
+**Properties:**
 
 A data structure contains a HEAD, TAIL and LENGTH
 Each node is only connected one directionly to the next node
@@ -15,11 +15,8 @@ Each node is only connected one directionly to the next node
 
 # Pushing, Popping values
 
-// piece of data - val
-// reference to next node - next
-
 ```
-c// piece of data - val
+// piece of data - val
 // reference to next node - next
 
 class Node {
@@ -80,11 +77,10 @@ class SinglyLinkedList{
 
 var list = new SinglyLinkedList
 
-
-```
-
 // list.push("Hello")
 // list.push('Still working')
 // list.push(99)
 // list.pop()
 // list.pop
+
+```
