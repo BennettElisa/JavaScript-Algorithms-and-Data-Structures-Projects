@@ -7,7 +7,7 @@
 
 **Abstract Data Type**
 
-    Abstract data type (ADT) is an abstraction of a data structure which only provides the interface to which the data structure then must adhere to. The interface does not give any specific details about how or in what language it will happen.
+    Abstract data type (ADT) is an abstraction of a data structure which only provides the interface to which the data structure then must adhere to. The interface does not give any specific details about how or in what language it will happen. Example:
 
     | Abstraction | Inplementation |
     | ----        | ----           |
@@ -16,8 +16,8 @@
 
 **Big-O Notation**
 
-Tells us about the worst case senario.
-n - The size of the input Complexities ordered in the smallest to largest.
+Big-O simply means the time complexity of an algorithm and tells us about the worst case senario.
+n - represents the size of the input complexities ordered in the smallest to largest.
 
 - Constant Time: 0(1)
   - while loop

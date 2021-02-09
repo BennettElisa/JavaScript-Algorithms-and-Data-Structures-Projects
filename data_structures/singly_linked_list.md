@@ -11,14 +11,17 @@ Properties:
 A data structure contains a HEAD, TAIL and LENGTH
 Each node is only connected one directionly to the next node
 
-![image](insert section 19 hand drawing here)
+![Singly List Visual](visuals/singly_list.jpg)
 
-# Pushing values onto the list
+# Pushing, Popping values
 
 // piece of data - val
 // reference to next node - next
 
 ```
+c// piece of data - val
+// reference to next node - next
+
 class Node {
     constructor(val){
         this.val = val;
@@ -32,6 +35,8 @@ class SinglyLinkedList{
         this.tail = null
         this.length = 0
     }
+
+    // add values to list with push method
     push(val){
       let newNode = new Node(val)
       if(!this.head){
@@ -45,11 +50,41 @@ class SinglyLinkedList{
       this.length++
           return this
     }
+
+    // remove values from list with pop method
+      pop(){
+          // if nothing in the list return undefined
+          if(!this.length) return undefined
+          // variable to keep track of what the last item was
+        let current = this.head
+        let newTail = current
+
+        //loop through list until you reach the tail
+        while(current.next){
+            newTail = current
+            current = current.next
+        }
+
+            this.tail = newTail
+            this.tail.next = null // this cuts the old one off
+            this.length--
+            if(this.length === 0){ // reset head and tail to null when last item is popped off
+                this.head = null
+                this.tail = null
+            }
+            return current
+
+         }
+
 }
 
 var list = new SinglyLinkedList
+
+
 ```
 
 // list.push("Hello")
 // list.push('Still working')
 // list.push(99)
+// list.pop()
+// list.pop
