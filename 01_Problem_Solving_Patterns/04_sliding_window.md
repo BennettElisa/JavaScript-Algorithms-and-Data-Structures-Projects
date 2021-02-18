@@ -1,6 +1,8 @@
 # Sliding Window Pattern
 
-# Time Complexity: O(N)
+### Time Complexity O(n) Linear Time
+
+### Space Complexity O(1)
 
 - The sliding window pattern involves creating a window which can be an **array** or **number** from one position to another.
 
@@ -28,7 +30,7 @@ function maxSubarraySum(arr, num){
     }
     tempSum = maxSum; // tempSum is holding the value of maxSum
 
-// this new loop starts based the # passed in which moves up foward in our array
+// this new loop starts based on the # passed in which moves up foward in our array
     for (let i = num; i < arr.length);
         tempSum = tempSum - arr[i-num] + arr[i]
         maxSum = Math.max(maxSum, tempSum);

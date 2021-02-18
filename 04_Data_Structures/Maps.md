@@ -2,7 +2,7 @@
 
 A **map** (noun) is a data structure in JavaScript that was introduced in ES6 to associate data with keys and a proper way to handle this kind of data organization within using plan objects what will also contain the Object.prototype which now can be avoided.
 
-JavaScript came up with a class (and data structure) called **Map** that stores a mspping and allows any type of keys i.e strings, objects, etc.
+JavaScript came up with a class (and data structure) called **Map** that stores a mapping and allows any type of keys i.e strings, objects, etc.
 
 Setting properties on the Map data structure can be done individually such as:
 
