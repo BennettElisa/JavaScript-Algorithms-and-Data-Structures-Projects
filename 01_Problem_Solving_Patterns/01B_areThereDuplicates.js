@@ -15,7 +15,7 @@ function areThereDuplicates(...arg) {
   return false;
 }
 
-// One Liner Solution
+// One Liner Solution  💓
 
 const areThereDuplicates = (...arg) => {
   return new Set(args).size !== args.length;

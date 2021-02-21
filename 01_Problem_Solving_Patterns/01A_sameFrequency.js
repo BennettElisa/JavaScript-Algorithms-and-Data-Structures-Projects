@@ -27,3 +27,6 @@ function sameFrequency(n1, n2) {
 
   return true; // same number of frequencies
 }
+
+sameFrequency(123, 324); // false
+sameFrequency(1234, 4312); // true
