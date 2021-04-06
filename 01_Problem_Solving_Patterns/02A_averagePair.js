@@ -2,8 +2,8 @@ function averagePair(arr, tgtAvg) {
   // it's a sorted array
   if (!arr.length) return false;
 
-  let i = 0,
-    j = arr.length - 1;
+  let i = 0;
+  let j = arr.length - 1;
 
   while (i < j) {
     let sumAvg = (arr[i] + arr[j]) / 2;
