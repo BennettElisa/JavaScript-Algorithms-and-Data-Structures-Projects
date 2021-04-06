@@ -11,7 +11,7 @@ A node contains information like a string or a number AND it references ANOTHER 
 A data structure contains a HEAD, TAIL and LENGTH
 Each node is only connected one directionly to the next node
 
-![Singly List Visual](visuals/singly_list.jpg)
+![Singly List Visual](visuals/singly-linked-list.png)
 
 # Pushing, Popping values
 
