@@ -10,6 +10,13 @@ Used very frequency because they are built into most all languges. For example a
     - Understanding how collisions occur in a hash table
     - Handle collisions using seperate chaining or linear probing
 
+## Real Life Examples:
+
+    - Dictionaries - quickly look up a word and find it's definition or translation
+    - Spell Checkers
+    - Compilers to look up address of functions and varaibles and code editors for looking something up
+    -
+
 **So, what is a hash table?**
 Hash tables are used to store key-value pairs
 Like arrays, but keys are NOT ordered
@@ -29,10 +36,10 @@ To understand what's happening under the hood we're going to recreate the wheel 
 
 1.) We'll use an array to implement a hash table model
 2.) We need a way to convert keys into a valid array indices
-3.) Have a function that performs this task is called a hash function
+3.) Have a function that performs this task is called a **hash function**
 4.) A Hash table that takes an image, pdf, string, video --> any type of information and returns a number isn't easy which is why we want to convert keys into valid
 
-Key Words:
+# Key Words:
 
 - Fixed Size
 - Fast(i.e constant time)
@@ -42,7 +49,7 @@ Key Words:
 
 First Example:
 Creating a hash table for a string, using UTF-16 Character Codes
-Using PRIME NUMBERS for the array length and determining the index to increase performance and lower collision.
+Using **PRIME NUMBERS** for the array length and determining the index to increase performance and lower collision.
 
 function hash(key, arrayLen){
 
