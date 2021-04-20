@@ -73,6 +73,9 @@ class SinglyLinkedList{
 
          }
 
+
+
+
 }
 
 var list = new SinglyLinkedList
@@ -82,5 +85,32 @@ var list = new SinglyLinkedList
 // list.push(99)
 // list.pop()
 // list.pop
+
+```
+
+# GET
+
+Retrieve a node by it's position in the Linked List
+Traverse the List
+
+# GET Pseudocode
+
+- This function should accept an index
+- If the Index is less than zero or greater than or equal to the the length of the list, return null
+- Loop through the list until you reach the index and return the node at that specific index
+
+```
+get(index){
+    if(index < 0 || index >= this.length) return null
+
+    let counter = 0
+    let current = this.head
+    while(counter !== index){
+        counter++
+        current = current.next
+    }
+    return current
+}
+
 
 ```

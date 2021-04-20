@@ -1,10 +1,17 @@
 # Stacks - LIFO - Last In First Out
 
+# Big O
+
+    - Insertion O(1)
+    - Removal O(1)
+    - Searching O(n) --> although if you want to search you probably don't want to use a __Stack__
+
 - Collection of data
 - Stacks are used to manage function invocations
 - Undo / Redo features in Photoshop, Mircosoft Word etc.
 - Routing (the history object) is treated like a stack
 - Tree's and Graphs algorithms can be use a Stack as an intermediate
+- Not built into JavaScript
 
 - Abstract Concept - store data in some way that the first things in is the first thing out
 - Many ways to build a stack
@@ -79,7 +86,7 @@ pop(){
     this.first = this.first.next
     // decrement size
     this.size--
-    return temp.valu
+    return temp.value
 }
 
 }
