@@ -15,7 +15,7 @@ function areThereDuplicates(...arg) {
   return false;
 }
 
-// One Liner Solution  💓
+// One Line Solution  💓  and O(1) Constant Time
 
 const areThereDuplicates = (...arg) => {
   return new Set(args).size !== args.length;
