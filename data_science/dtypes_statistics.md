@@ -5,10 +5,13 @@
 Data types are a way to categorize different types of variables.
 
 - **Categorical Data**
+
   - gender
   - language
-  - categorical data can also take on numerical values i.e 1 dog 0 cat
+  - categorical data can also take on numerical values i.e 1 dog 0 cat, yes - 1 no - 0
+
 - **Nominal Data**
+
   - represents discrete units
   - used to label variables with no quantitative value
   - "labels"
@@ -16,9 +19,10 @@ Data types are a way to categorize different types of variables.
   - i.e Are you Single? Yes/No
     -Also called dichotomous - only 2 categories
   - i.e What languges do you speak? English/French/German/Spanish
+
 - **Ordinal Data**
 
-  - discree and ordered units
+  - discrete and ordered units
   - almost the same as nominal data except ORDERING matters
   - usually used to measure non-numeric features like happiness customer statisfaction etc.
   - i.e What is your educational background?
@@ -56,10 +60,10 @@ Data types are a way to categorize different types of variables.
   - k-NN classification invovles calculating distances between datapoints therefore **numerical variables** must be used
   - this applied ONLY to the predictor variables
   - the outcome variable should remain a categorical variable
-  - varies ways to pick value k
-    - one is using the square root rule of thumb
+  - variety of ways to pick value k
+    - one way is by using the square root rule of thumb
     - k value is approximately the square root of the sample size
-  - Always **scale** features incase features are on different metrics
+  - Always **scale** features in case features are on different metrics
 
 - k-NN Regression
   - predicing a **continuous outcome**
@@ -67,6 +71,6 @@ Data types are a way to categorize different types of variables.
   - involves calculating distances between datapoints
   - only numeric varaibles for k-NN regression
     - this applies to the predictor variables and the outcome variable. Both should already be numeric variables.
-  - Always **scale** features incase features are on different metrics
+  - Always **scale** features in case features are on different metrics
   - works to predict new values from a continuous distribution for unprecedented feature values
   - takes the average value of it's k-nearest neighbors
