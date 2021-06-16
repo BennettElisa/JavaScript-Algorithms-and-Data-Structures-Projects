@@ -40,11 +40,13 @@ console.log("Answer:", twoNumSum([10,1,7,6], 8))
 ## Runs at O(n) time and O(n) space
 
 ```
-        nums_hash = {}
-        for i, num in enumerate(nums):
-            potentialMatch = target - num
-            <!-- if key "potentialMatch" is in the dic -->
-            if potentialMatch in nums_hash:
-                return [nums_hash[potentialMatch], i]
-            nums_hash[num] = i
+def twoNumSum(nums, target):
+  nums_hash = {}
+  for i, num in enumerate(nums):
+      potentialMatch = target - num
+      if potentialMatch in nums_hash:
+          return [nums_hash[potentialMatch], i]
+      nums_hash[num] = i
+
+print(twoNumSum([10,1,7,6], 8))
 ```
