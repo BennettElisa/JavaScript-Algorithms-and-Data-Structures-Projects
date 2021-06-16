@@ -17,6 +17,20 @@ const twoNumSum = function(nums, target) {
 };
 ```
 
+```
+const twoNumSum = function(nums, target) {
+    const cache = {}
+    for(let i = 0; i < nums.length; i+=1) {
+      let num_diff = target - nums[i]
+      if(num_diff in cache) {
+        return [cache[num[i], i]]
+      }
+      cache[num] = i
+    }
+}
+
+```
+
 ## Python
 
 ## Runs at O(n) time and O(n) space
