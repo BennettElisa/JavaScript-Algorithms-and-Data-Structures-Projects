@@ -23,11 +23,15 @@ const twoNumSum = function(nums, target) {
     for(let i = 0; i < nums.length; i+=1) {
       let num_diff = target - nums[i]
       if(num_diff in cache) {
-        return [cache[num[i], i]]
+        return [cache[num_diff], i]
       }
-      cache[num] = i
+      console.log(cache)
+      cache[nums[i]] = i
     }
 }
+
+
+console.log("Answer:", twoNumSum([10,1,7,6], 8))
 
 ```
 
