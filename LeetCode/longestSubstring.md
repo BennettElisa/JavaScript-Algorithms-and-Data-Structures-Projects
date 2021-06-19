@@ -14,3 +14,34 @@
 
   0 <= s.length <= 5 \* 10^4
   's' consist of English letters, digits, symbols and spaces
+
+  ```
+  const lengthOfLongestSubstring = function(s) {
+
+  let sLength = s.length // 10
+  let result = 0
+  let hashMap = {}
+  let i = 0
+
+
+
+  for( let j = 0; j < s.length; j++){
+  	if(s[j] in hashMap){
+  		i = Math.max(hashMap[s[j]], i)
+  	}
+
+  	result = Math.max(result, j-i+1)
+  	hashMap[[s[j]]] = j + 1
+
+  }
+
+  return result
+
+  }
+
+  lengthOfLongestSubstring("abcabcbb") // 3
+   lengthOfLongestSubstring("bbbbb") // 1
+    lengthOfLongestSubstring("") // 0
+     lengthOfLongestSubstring(" ") // 1
+
+  ```
