@@ -41,7 +41,7 @@ To understand what's happening under the hood we're going to recreate the wheel 
 
 # Key Words:
 
-- Fixed Size
+- Fixed Size - size is determined at the START
 - Fast(i.e constant time)
 - Distributes uniformly
 - Doesn't cluster outputs as specific indices
@@ -67,3 +67,19 @@ function hash(key, arrayLen){
 }
 
 hash("pink")
+
+## Hash Function
+
+```
+function hashStringToInt(s, tableSize){
+  // select a prime number to use
+  let hash = 17
+  // iterate over the string
+  for(let i=0; i <s.length; i++){
+    // hash the string
+    hash = 13 * hash * s.charCodeAt(i) % tableSize
+
+  }
+  return hash
+}
+```
