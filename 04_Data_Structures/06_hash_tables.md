@@ -98,4 +98,118 @@ With **seperate chaining** at each index in our array we store values using a mo
 
 This allows us to store multiple key value pairs at the same position
 
-## HashTable Class
+## HashTable Class with Set, Get, and Hash Function
+
+class HashTable {
+
+let table = new Array(97) // prime number for hash table size
+let numItems = 0
+let loadFactor = this.numItems / this.table.length
+
+// conditional to check load factor and increase size of hashtable if at 80% load factor
+
+    // Hash Function
+    hashStringToInt(s){
+    // select a prime number to use
+    let hash = 17
+
+        // iterate over the string
+        for(let i=0; i < s.length; i++){
+          // hash the string
+          hash = 13 * hash * s.charCodeAt(i) % this.table.length
+        }
+        return hash
+
+    }
+
+// set method accept a key and a value
+
+    setItem(key, value){
+      // hash the key
+        const idx = this.hashStringToInt(key)
+        if(!this.table[idx]){
+           this.table[idx] = []
+             this.numItems+=1
+        } else {
+           this.table[idx].push([key, value])
+             this.numItems+=1
+        }
+    }
+
+// get method to get the value
+
+    getItem(key){
+      // hash the key that is passed in
+
+      const idx = this.hashStringToInt(key)
+
+        for(let [findKey, value] of this.table[idx]){
+          if(findKey === key){
+            return value
+          }
+        }
+
+    }
+
+}
+
+## Another Example with Constructor Function
+
+```
+
+class HashTable {
+  constructor(size){
+    this.table = new Array(size)
+    this.numItems = 0
+  }
+    // Hash Function
+  hashStringToInt(s){
+    // select a prime number to use
+    let hash = 17
+        // iterate over the string
+        for(let i=0; i < s.length; i++){
+          // hash the string
+          hash = 13 * hash * s.charCodeAt(i) % this.table.length
+        }
+        return hash
+
+    }
+
+// set method accept a key and a value
+
+    setItem(key, value){
+      // hash the key
+        const idx = this.hashStringToInt(key)
+        if(!this.table[idx]){
+           this.table[idx] = []
+        }
+           this.table[idx].push([key, value])
+           this.numItems+=1
+
+    }
+
+// get method to get the value
+
+    getItem(key){
+      // hash the key that is passed in
+      const idx = this.hashStringToInt(key)
+
+        for(let [findKey, value] of this.table[idx]){
+          // find the matching key
+          if(findKey === key){
+            return value
+          }
+        }
+        // otherwise return undefined - meaning the key wasn't found
+        return undefined
+    }
+}
+
+let newHash = new HashTable(7)
+newHash.setItem("hi", "hello friend!")
+newHash.setItem("bye", "Adios")
+console.log(newHash.getItem("bye")) // "Adios"
+console.log(newHash.getItem("hi")) // hello friend
+newHash
+
+```
