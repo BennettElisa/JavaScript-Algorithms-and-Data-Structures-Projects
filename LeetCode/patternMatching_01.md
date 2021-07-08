@@ -29,20 +29,23 @@ const patternMatch = (words, pattern) => {
 // 'aa', 'cc'
 const isMatch = (word, pattern) => {
 
+       // create data structure to store key value pairs of matches
     const hash = new Map()
 
-    for (let i = 0; i < word.length; i++){
+    // iterate over the word (string) and look at each character
+    for(let i = 0; i < word.length; i++){
 
-        if(!hash.has(word[i])){
+        // if the letter from the pattern doesn't exist add to hash map
+        if(!hash.has(pattern[i])){
 
-             hash.set(word[i], pattern[i])
-
+            // set the key value pair for the mapping
+            hash.set(pattern[i], word[i])
         }
 
-        if (hash.get(word[i]) != pattern[i]){
-
-             return false
-
+        // if the letter does exist in the hash map make sure it matches the pattern letter
+        //  it was orginally mapped to - if not - return false
+        if(hash.get(pattern[i]) != word[i]){
+            return false
         }
     }
 
