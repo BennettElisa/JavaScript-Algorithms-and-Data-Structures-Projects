@@ -77,9 +77,25 @@ function hashStringToInt(s, tableSize){
   // iterate over the string
   for(let i=0; i <s.length; i++){
     // hash the string
+    console.log(s.charCodeAt(i))
     hash = 13 * hash * s.charCodeAt(i) % tableSize
+    console.log("Each hash", i, hash)
 
   }
   return hash
 }
 ```
+
+## Collisions
+
+- Seperate Chaining
+- Linear Probing
+- Quadratic Probing
+
+When a collision happens two of the most common ways of dealing with the collision is through seperate chaining and linear probing or quadratic probing
+
+With **seperate chaining** at each index in our array we store values using a more sophisticated data structure (e.g an array or a linked list)
+
+This allows us to store multiple key value pairs at the same position
+
+## HashTable Class
