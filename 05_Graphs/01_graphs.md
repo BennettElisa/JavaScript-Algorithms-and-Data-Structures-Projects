@@ -81,17 +81,14 @@ Storage     |   O(|V| + |E|)| O(|V^2|)
 ## Graph Class
 
 ```
-class Graph {
-  constructor(){
-    // this will store the actual edges
-    this.adjacencyList = {}
-  }
+class Graph{
+    constructor(){
+        this.adjacencyList ={}
+    }
 
-  // add a vertex method - we have to add a vertex before we can add an edge
-  addVertex(vName){
-    // add a key to the adjacency list with name of vertext and set value to empty array
-    this.adjacencyList[vName] = []
-  }
+    addVertex(vName){
+        if(!this.adjacencyList[vName]) this.adjacencyList[vName] = []
+    }
 
 // our edge will represent a flight from one city to another
 // the method will accept to vertices v1 and v2
@@ -102,10 +99,55 @@ class Graph {
             this.adjacencyList[v1].push(v2)
             this.adjacencyList[v2].push(v1)
 
+    };
+
+// Remove a Edge
+// accept two vertices, reassign the key of vertex1 to an array that doesn't contain v2 and reassign v2 to an array without v1
+    removeEdge(v1, v2){
+      // make sure to REASSIGN the array to the new filtered array!
+      this.adjacencyList[v1] = this.adjacencyList[v1].filter(elem => {
+        // return elements that are not v2
+        if(elem !== v2) return elem
+      });
+
+      this.adjacencyList[v2] = this.adjacencyList[v2].filter(elem => {
+        // return elements that are not v2
+        if(elem !== v1) return elem
+      });
     }
+   // Removing a Vertex
 
+   // iterate over any vertices in adjacency list for that vertex
+    // inside of the loop call our removeEdge function with the vertex we are removing
+    // and any values in the adjacency list for that vertex
+    // delete the key in the adjacency list for that vertex
 
-}
+     removeVertex(v1){
+      // as long as the vertex exist move into the block code
+      if(this.adjacencyList[v1]){
+
+          this.adjacencyList[v1].forEach(edge => {
+          this.removeEdge(edge, v1)
+          })
+
+            delete this.adjacencyList[v1]
+      }
+
+      }
+
+};
+
+let g = new Graph()
+g.addVertex("Tokoyo")
+g.addVertex("Richmond")
+g.addVertex("Austin")
+g.addVertex("Cali")
+g.addEdge("Tokoyo", "Austin")
+g.addEdge("Tokoyo", "Richmond")
+g.addEdge("Tokoyo", "Cali")
+g.addEdge("Richmond", "Cali")
+g.removeVertex("Tokoyo")
+console.log(g)
 
 
 ```
