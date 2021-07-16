@@ -13,12 +13,20 @@ No starting point, no parent node
 - Recommendations tend to be stored with graph structure
 - Maps
 
-## Types of Graphs
+## Types of Graphs & key words
 
 _Vertex_ - a node
 _Edge_ - connection between the node
+_arch_ - connection between the node aka edge
+
+_adjacent_ - two nodes are adjacent if they share an edge
+_adjacencyList_ - all the nodes directly connected to that node
+
 _Weighted/Unweightes_ - values assigned to distances between vertices
 _Directed/Undirected_ - directions assigned to distanced between vertices
+
+Example of directed - a food chain model of who eats who
+Example of undirected - facebook friends, LinkedIn network
 
 ## Storing Graphs: Adjacency Matrix
 
